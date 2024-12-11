@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "tox_nox_python_tests"
+version = "0.1.0"
+description = "A project demonstrating the use of Tox and Nox for validating code across multiple Python versions."
+authors = ["Wallace Espindola <wallace.espindola@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/wallaceespindola"
+repository = "https://github.com/wallaceespindola"
+documentation = "https://github.com/wallaceespindola"
+keywords = ["tox", "nox", "pytest", "poetry", "validation", "testing", "python-versions"]
+license = "MIT"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^8.3"
+nox = "^2024.10.9"
+tox = "^4.23.2"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
