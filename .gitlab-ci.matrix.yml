@@ -1,0 +1,32 @@
+stages:
+  - test
+
+.matrix_python_test_template:
+  stage: test
+  image: python:${PYTHON_VERSION}
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+    PYTHONPATH: .
+  before_script:
+    - pip install poetry
+    - poetry install --no-interaction --no-root
+  script:
+    - poetry run pytest --junitxml=reports/matrix/junit.xml  # Replace with your specific test command if different
+  cache:
+    paths:
+      - .cache/pip/
+  artifacts:
+    when: always
+    reports:
+      junit: reports/matrix/junit.xml  # If you have this report configured
+    paths:
+      - reports/matrix/
+  only:
+    - branches
+    - merge_requests
+
+matrix_python_tests:
+  parallel:
+    matrix:
+      - PYTHON_VERSION: [ "3.8", "3.9", "3.10", "3.11", "3.12", "3.13" ]
+  extends: .matrix_python_test_template

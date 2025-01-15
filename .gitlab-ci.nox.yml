@@ -1,0 +1,27 @@
+stages:
+  - test
+
+nox_tests:
+  stage: test
+  image: python:3.11  # Specify a Python version compatible with your project
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  before_script:
+    - pip install poetry
+    - poetry install --no-interaction --no-root
+  script:
+    - poetry run nox
+  cache:
+    paths:
+      - .nox/
+      - .cache/pip/
+  artifacts:
+    when: always
+    reports:
+      junit: reports/nox/junit.xml  # Ensure nox is configured to generate this report
+    paths:
+      - .nox/
+      - reports/nox/
+  only:
+    - branches
+    - merge_requests

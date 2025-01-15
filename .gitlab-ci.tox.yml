@@ -1,0 +1,27 @@
+stages:
+  - test
+
+tox_tests:
+  stage: test
+  image: python:3.11  # Specify a Python version compatible with your project
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  before_script:
+    - pip install poetry
+    - poetry install --no-interaction --no-root
+  script:
+    - poetry run tox
+  cache:
+    paths:
+      - .tox/
+      - .cache/pip/
+  artifacts:
+    when: always
+    reports:
+      junit: reports/tox/junit.xml  # Ensure tox is configured to generate this report
+    paths:
+      - .tox/
+      - reports/tox/
+  only:
+    - branches
+    - merge_requests

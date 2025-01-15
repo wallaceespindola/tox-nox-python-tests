@@ -1,0 +1,50 @@
+name: Nox Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  nox-tests:
+    name: Run Nox Tests on Python
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11.9"
+
+      - name: Display Python Version
+        run: python -c "import sys; print(sys.version)"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Cache Poetry Dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/pypoetry
+            ~/.cache/pip
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      - name: Install Dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Run Nox Tests
+        run: poetry run nox
+
+      - name: Upload Nox Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: nox-reports
+          path: reports/nox/

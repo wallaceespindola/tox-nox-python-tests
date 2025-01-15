@@ -1,14 +1,15 @@
 # Using Tox and Nox for Multiple Python Versions Validation
 
-This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, and **Pytest** to validate Python projects
-across multiple Python versions. This is specially useful for shared libs projects and multi-user environments projects.
+This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate 
+Python projects across multiple Python versions. This is specially useful for shared libs projects 
+and multi-user environments projects.
 
 ## Features
 
 - Example functions for addition and subtraction.
 - Unit testing on tht with `pytest`.
 - Dependency and environment management with `Poetry`.
-- Multi-version Python application testing with `Tox` and `Nox`.
+- Multi-version Python application testing with `Tox`, `Nox` and `CI/CD` (Gitlab and GitHub Actions).
 
 ## Getting Started
 
@@ -53,8 +54,11 @@ Here are some helpful references to understand the tools used in this project:
 
 [Tox Documentation](https://tox.wiki/en/).
 [Nox Documentation](https://nox.thea.codes/en/stable/).
-[Poetry Documentation](http).
+[Poetry Documentation](https://python-poetry.org/docs/).
 [Pytest Documentation](https://docs.pytest.org/en/stable/).
+[GitLab Documentation](https://docs.gitlab.com/).
+[GitHub Actions Documentation](https://docs.github.com/en/actions).
+
 
 ### Related Articles
 
@@ -72,4 +76,4 @@ Dzone: Automating Python Multi-Version Testing with Tox and Nox
 ## License
 
 - This project is released under the MIT License. See the [LICENSE](LICENSE) file for details.
-- Copyright © 2024 [Wallace Espindola](https://github.com/wallaceespindola/).
+- Copyright © 2025 [Wallace Espindola](https://github.com/wallaceespindola/).
