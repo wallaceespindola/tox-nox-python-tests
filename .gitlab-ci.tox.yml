@@ -17,8 +17,6 @@ tox_tests:
       - .cache/pip/
   artifacts:
     when: always
-    reports:
-      junit: reports/tox/junit.xml  # Ensure tox is configured to generate this report
     paths:
       - .tox/
       - reports/tox/

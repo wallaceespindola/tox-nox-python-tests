@@ -17,8 +17,6 @@ nox_tests:
       - .cache/pip/
   artifacts:
     when: always
-    reports:
-      junit: reports/nox/junit.xml  # Ensure nox is configured to generate this report
     paths:
       - .nox/
       - reports/nox/

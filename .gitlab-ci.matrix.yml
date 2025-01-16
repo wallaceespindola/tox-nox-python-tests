@@ -11,14 +11,12 @@ stages:
     - pip install poetry
     - poetry install --no-interaction --no-root
   script:
-    - poetry run pytest --junitxml=reports/matrix/junit.xml  # Replace with your specific test command if different
+    - poetry run pytest --verbose
   cache:
     paths:
       - .cache/pip/
   artifacts:
     when: always
-    reports:
-      junit: reports/matrix/junit.xml  # If you have this report configured
     paths:
       - reports/matrix/
   only:

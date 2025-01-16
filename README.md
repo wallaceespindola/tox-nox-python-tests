@@ -1,7 +1,7 @@
 # Using Tox, Nox and CI/CD for Multiple-Version Python Validation
 
-This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate 
-Python projects across multiple Python versions. This is specially useful for shared libs projects 
+This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate
+Python projects across multiple Python versions. This is specially useful for shared libs projects
 and multi-user environments projects.
 
 ## Features
@@ -20,10 +20,15 @@ git clone https://github.com/wallaceespindola/tox-nox-python-tests.git
 cd tox-nox-python-tests
 ```
 
-### Install Dependencies
+### Install Poetry
 
 ```bash
 pip install poetry
+```
+
+### Install Dependencies (listed in pyproject.toml)
+
+```bash
 poetry install
 ```
 
@@ -39,31 +44,38 @@ poetry run pytest --verbose
 poetry run tox
 ```
 
+Example output:
+
+![tox_output.png](resources/tox_output.png)
+
 ### Run Nox
 
 ```bash
 poetry run nox
 ```
 
+Example output:
+
+![nox_output.png](resources/nox_output.png)
+
 ### References
 
-This project was created to showcase how to validate Python projects across multiple Python versions using 
-Tox, Nox and CI/CD for automated testing, with dependency and environment management powered by Poetry. 
+This project was created to showcase how to validate Python projects across multiple Python versions using
+Tox, Nox and CI/CD for automated testing, with dependency and environment management powered by Poetry.
 It includes unit tests written with Pytest.
 Here are some helpful references to understand the tools used in this project:
 
-[Tox Documentation](https://tox.wiki/en/).
-[Nox Documentation](https://nox.thea.codes/en/stable/).
-[Poetry Documentation](https://python-poetry.org/docs/).
-[Pytest Documentation](https://docs.pytest.org/en/stable/).
-[GitLab CI/CD Documentation](https://docs.gitlab.com/).
-[GitHub Actions CI/CD Documentation](https://docs.github.com/en/actions).
-
+- [Tox Documentation](https://tox.wiki/en/).
+- [Nox Documentation](https://nox.thea.codes/en/stable/).
+- [Poetry Documentation](https://python-poetry.org/docs/).
+- [Pytest Documentation](https://docs.pytest.org/en/stable/).
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/).
+- [GitHub Actions CI/CD Documentation](https://docs.github.com/en/actions).
 
 ### Related Articles
 
-Dev.to: Test Python Code Like a Pro with Tox, Nox and CI/CD
-Dzone: Automating Python Multi-Version Testing with Tox, Nox and CI/CD
+- Dev.to: Test Python Code Like a Pro with Tox, Nox and CI/CD
+- Dzone: Automating Python Multi-Version Testing with Tox, Nox and CI/CD
 
 ## Author
 

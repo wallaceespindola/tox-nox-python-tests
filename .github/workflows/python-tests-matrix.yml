@@ -44,7 +44,7 @@ jobs:
         run: poetry install --no-interaction --no-root
 
       - name: Run Tests with Pytest
-        run: poetry run pytest --junitxml=reports/ci-matrix/junit.xml
+        run: poetry run pytest --verbose
 
       - name: Upload CI/CD Artifacts
         if: always()
