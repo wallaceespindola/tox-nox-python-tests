@@ -1,4 +1,4 @@
-# Using Tox, Nox and CI/CD for Multiple-Version Python Validation
+# Using Tox, Nox and CI/CD for Multiple Python Versions Validation Tests
 
 This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate
 Python projects across multiple Python versions. This is specially useful for shared libs projects
