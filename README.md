@@ -1,3 +1,5 @@
+![Python](https://www.python.org/static/community_logos/python-logo-generic.svg)
+
 # Using Tox, Nox and CI/CD for Multiple Python Versions Validation Tests
 
 This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate
