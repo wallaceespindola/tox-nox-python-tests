@@ -2,7 +2,7 @@
 
 # Using Tox, Nox and CI/CD for Multiple Python Versions Validation Tests
 
-![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-pink)
+![MIT License](https://img.shields.io/badge/License-MIT-pink)
 ![Python](https://img.shields.io/badge/Built_with-Python-blue)
 ![Tox](https://img.shields.io/badge/Built_with-Tox-yellow)
 ![Nox](https://img.shields.io/badge/Built_with-Nox-purple)
