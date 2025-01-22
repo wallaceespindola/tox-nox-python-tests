@@ -3,9 +3,9 @@
 # Using Tox, Nox and CI/CD for Multiple Python Versions Validation Tests
 
 ![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-pink)
-![Python](https://img.shields.io/badge/Built_with-Java-blue)
+![Python](https://img.shields.io/badge/Built_with-Python-blue)
 ![Tox](https://img.shields.io/badge/Built_with-Tox-yellow)
-![Nox](https://img.shields.io/badge/Built_with-Nox-violet)
+![Nox](https://img.shields.io/badge/Built_with-Nox-purple)
 ![GitLab CI/CD](https://img.shields.io/badge/Powered_by-GitLab-orange)
 ![GitHub Actions CI/CD](https://img.shields.io/badge/Powered_by-GitHubActions-teal)
 
