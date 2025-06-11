@@ -1,4 +1,13 @@
+![Python](https://www.python.org/static/community_logos/python-logo-generic.svg)
+
 # Using Tox, Nox and CI/CD for Multiple Python Versions Validation Tests
+
+![MIT License](https://img.shields.io/badge/License-MIT-pink)
+![Python](https://img.shields.io/badge/Built_with-Python-blue)
+![Tox](https://img.shields.io/badge/Built_with-Tox-yellow)
+![Nox](https://img.shields.io/badge/Built_with-Nox-purple)
+![GitLab CI/CD](https://img.shields.io/badge/Powered_by-GitLab-orange)
+![GitHub Actions CI/CD](https://img.shields.io/badge/Powered_by-GitHubActions-teal)
 
 This project demonstrates the integration of **Tox**, **Nox**, **Poetry**, **CI/CD** and **Pytest** to validate
 Python projects across multiple Python versions. This is specially useful for shared libs projects
